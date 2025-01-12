@@ -1,8 +1,15 @@
-# React + Vite
+# Penang Paradise
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Your Number 1 Website**
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Team Members](#team-members)
+- 
+Visit our website: [TalentBridge](https://)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Team Members
+Our dedicated team consists of passionate students:
+- **[Muhammad Ammar Danial Bin Abdullah]**
+- **[Ng Xuan Hern]**
+- **[Low Yvonne]**
+- **[Member 4 Name]** *(optional, if applicable)*
