@@ -1,0 +1,14 @@
+.video-container{
+    display: flex;
+    justify-content: center;
+}
+.usm{
+    text-align: center;
+    justify-content: center;
+    font-family: 'Fira Sans', Arial, sans-serif;
+}
+.description{
+    justify-content: center;
+    text-align: center;
+    margin: 30px 70px;
+}

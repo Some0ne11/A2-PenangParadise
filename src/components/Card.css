@@ -1,0 +1,158 @@
+
+.Memories_wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    grid-template-areas: 
+        "Grid-card-1 Grid-card-1 Grid-card-2 Grid-card-2 Grid-card-4 Grid-card-4"
+        "Grid-card-1 Grid-card-1 Grid-card-3 Grid-card-3 Grid-card-4 Grid-card-4"
+        "Grid-card-7 Grid-card-7 Grid-card-6 Grid-card-6 Grid-card-4 Grid-card-4"
+        "Grid-card-7 Grid-card-7 Grid-card-6 Grid-card-6 Grid-card-5 Grid-card-5";
+        gap: 20px !important; /* Added gap between cards */
+    justify-content: center;
+    padding: 50px; /* Added padding to create space between the grid and the edges */
+    margin: 20px 50px; /* Optional: Margin to create space outside the grid */
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+}
+
+
+.Memories_wrapper .MemoriesCard{
+    left: 20px;
+    width: auto;
+    margin: 20px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.Memories_wrapper .MemoriesCard::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: .6s;
+}
+
+.Memories_wrapper .MemoriesCard:hover:after{
+    opacity: 1;
+}
+
+.Memories_wrapper .MemoriesCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: .6s;
+}
+
+.Memories_wrapper .MemoriesCard:hover img{
+    filter: grayscale(50%) blur(5px);
+    transform: scale(1.2);
+}
+
+.Memories_wrapper .MemoriesCard .content{
+    position: absolute;
+    top: -80%;
+    left: 25px;
+    transition: .6s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    z-index: 9;
+}
+
+.Memories_wrapper .MemoriesCard:hover .content{
+    top: 15%;
+}
+
+.Memories_wrapper .MemoriesCard .content h3{
+    font-size: 28px;
+    color: rgb(255, 167, 45);
+}
+.Memories_wrapper .MemoriesCard .content a{
+    color: #fff;
+
+}
+.Memories_wrapper .MemoriesCard:nth-child(1){
+    left: 20px;
+    height: 560px;
+    grid-area: Grid-card-1;
+}
+.Memories_wrapper .MemoriesCard:nth-child(2){
+    left: -10px;
+    height: 250px;
+    grid-area: Grid-card-2;
+}
+.Memories_wrapper .MemoriesCard:nth-child(3){
+    left: -10px;
+    height: 250px;
+    grid-area: Grid-card-3;
+}
+.Memories_wrapper .MemoriesCard:nth-child(4){
+    left: -40px;
+    height: 560px;
+    grid-area: Grid-card-4;
+}
+.Memories_wrapper .MemoriesCard:nth-child(5){
+    left: -40px;
+    top: -45px;
+    height: 280px;
+    grid-area: Grid-card-5;
+}
+.Memories_wrapper .MemoriesCard:nth-child(6){
+    left: -10px;
+    top: -25px;
+    height: 280px;
+    grid-area: Grid-card-6;
+}
+.Memories_wrapper .MemoriesCard:nth-child(7){
+    top: -25px;
+    height: 280px;
+    grid-area: Grid-card-7;
+}
+
+@media screen and (max-width:1200px){
+    .Memories_wrapper .MemoriesCard .content h3{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .Memories_wrapper{
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* Changed to single column */
+        grid-template-areas: 
+        "Grid-card-1"
+        "Grid-card-2"
+        "Grid-card-3"
+        "Grid-card-4"
+        "Grid-card-5"
+        "Grid-card-6"
+        "Grid-card-7";
+        margin: 20px !important; /* Reduced margin for mobile */
+        padding: 20px !important; /* Reduced padding for mobile */
+    }
+    
+    .Memories_wrapper .MemoriesCard{
+        left: 0 !important; /* Reset left positioning */
+        width: 100% !important;
+        height: 400px !important;
+        margin: 10px 0 !important; /* Adjusted margin to be vertical only */
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    
+    /* Reset any specific positioning for individual cards */
+    .Memories_wrapper .MemoriesCard:nth-child(n){
+        left: 0;
+        top: 0;
+    }
+}

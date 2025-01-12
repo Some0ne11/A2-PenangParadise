@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 100px 200px;
+    z-index: 1;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;  /* Added to contain the videos */
+}
+
+.home .content {
+    z-index: 888;
+    color: #ffffff;
+    width: 70%;
+    margin-top: 50px;
+    padding-left: 200px;  
+    display: none;
+    position: relative;
+}
+
+.home .content.active {
+    display: block;
+}
+
+.home .content h1 {
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* White shadow */
+    color: #ffffff; /* Ensures white color */
+}
+
+.home .content p {
+    margin-bottom: 65px;
+    color: #ffffff; /* Pure white text color */
+    font-size: 1.1em; /* Optional: Slightly larger for readability */
+    text-shadow: none; /* No shadow for small text */
+}
+
+
+.home:before {
+    z-index: 777;
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.slider-navigation {
+    z-index: 888;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 700px;
+    width: 100%;
+    left: 0;
+}
+
+.slider-navigation .nav-btn {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover {
+    transform: scale(1.2);
+}
+
+.slider-navigation .nav-btn.active {
+    background: rgb(125, 125, 125);
+}
+
+.video-slide {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    clip-path: circle(0% at 0 50%);
+    z-index: 1;
+}
+
+.video-slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+    z-index: 2;  /* Added higher z-index for active slide */
+}
+
+@media (max-width: 1040px) {
+    header {
+        padding: 12px 20px;
+    }
+    
+    section {
+        padding: 100px 20px;
+    }
+    
+    .home .content {
+        padding-left: 20px;
+        width: 90%;  
+    }
+    
+    .home .content h1 {
+        font-size: 3em;  
+        line-height: 60px;
+    }
+    .video-slide.active {
+        
+        z-index: 2;
+    }
+    .home:before{
+        z-index: 777;
+    }
+    .home .content{
+        z-index: 888;
+    }
+}

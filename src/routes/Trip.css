@@ -1,0 +1,85 @@
+
+.tripcard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px; 
+}
+.t-card{
+    
+    width: 32%;
+    text-align: start;
+    box-shadow: 0 5px 25px 2px rgba(0,0,0,0.11);
+    border-radius: 7px;
+    
+    padding: 1rem 0.8rem;
+    flex: 0 1 calc(33.33% - 40px);
+    overflow: hidden; 
+
+}
+
+.t-image{
+    height: 250px;
+    width: auto;
+    overflow: hidden;
+    border-radius: 7px;
+}
+.t-image img{
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    border-radius: 7px;
+}
+.t-image:hover img{
+    transform: scale(1.3);
+}
+.t-card h4{
+    font-size: 1.3rem;
+    text-align: center;
+    padding: .9rem 0 .2rem 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width:850px) {
+    .trip{
+        margin: 4rem 2rem;
+    }
+    .tripcard{
+        flex-direction: column;
+    }
+    .t-card{
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+.box {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 8px; /* Add space between the icon and the text */
+    margin-bottom: 5px;
+  }
+  
+  .box i {
+    font-size: 20px; /* Adjust icon size */
+  }
+  
+  .box .word {
+    font-size: 16px; /* Adjust text size */
+    margin: 0; /* Remove any default margin */
+  }
+
+  
+  
+a:link{
+    text-decoration: none;
+    color: black;
+}
+a:visited{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: #090f31;
+}

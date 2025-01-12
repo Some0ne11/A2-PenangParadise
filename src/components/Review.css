@@ -1,0 +1,93 @@
+
+.travel-review {
+    display: flex;
+    gap: 4rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .map-section {
+    flex: 1;
+    position: relative;
+    margin-top: 50px;
+  }
+  
+  .world-map {
+    width: 100%;
+    height: auto;
+  }
+  
+  .location-tag {
+    position: absolute;
+    background: #002147;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .review-section {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  
+  
+  h1 {
+    color: #002147;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+
+  .rating-number {
+    color: #002147;
+    margin-left: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .review-text {
+    color: #666;
+    line-height: 1.6;
+    margin: 1.5rem 0;
+    text-align: left;
+  }
+  
+  .reviewer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .reviewer-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .reviewer-info h3 {
+    color: #002147;
+    margin: 0;
+  }
+  
+  .reviewer-info span {
+    color: #666;
+    font-size: 0.9rem;
+  }
+.review-text a:link{
+  color: black;
+}
+.review-text a:visited{
+  color: black;
+}
+.review-text a:hover{
+  color: #124c93;
+}
+  @media (max-width: 768px) {
+    .travel-review {
+      flex-direction: column;
+      gap: 2rem;
+  }
+  }

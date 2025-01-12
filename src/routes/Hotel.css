@@ -1,0 +1,194 @@
+/* Hotel Grid Styling */
+
+.hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Larger cards with minimum width of 400px */
+    gap: 30px; /* Larger gap between cards */
+    margin-top: 20px;
+    justify-items: center;
+    padding: 0 10px;
+}
+
+/* Hotel Card Styling */
+.hotel-card {
+    background-color: white;
+    border-radius: 30px; /* Larger radius for rounded corners */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px; /* More padding for a spacious feel */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 600px; /* Increase max width for larger cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Hover Effect on Hotel Card */
+.hotel-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Hotel Image Container */
+.hotel-image-container {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.hotel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover Image Effect */
+.hotel-hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hotel-card:hover .hotel-image {
+    transform: scale(1.1);
+}
+
+.hotel-card:hover .hotel-hover-image {
+    opacity: 1;
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+/* Hotel Name Styling */
+h3 {
+    font-size: 1.8rem;
+    color: #222;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin: 10px 0;
+    text-align: center;
+}
+/* Price Range Section */
+.price-range {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    align-items: center; /* Center align the items vertically */
+    justify-content: center; /* Center align the content horizontally */
+    text-align: center;
+    margin: 20px auto; /* Adds space and centers the div */
+    padding: 10px;
+    gap: 20px; /* Adds spacing between the items */
+}
+
+.price-range p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 20px; /* Space before the price options */
+}
+
+.price-range label {
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    align-items: center; /* Align the input and label text */
+}
+
+.price-range input {
+    margin-right: 5px; /* Space between the radio button and label text */
+}
+
+
+/* Button Styling */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hotel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hotel-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .search-bar {
+        width: 150px; /* Make it even smaller on mobile */
+        font-size: 0.7rem; /* Reduce text size further */
+        padding: 4px 8px; /* Reduce padding on mobile */
+        
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+    .price-range {
+        display: flex;
+        flex-direction: column; /* Stack items vertically on mobile */
+        gap: 15px; /* Add spacing between items */
+    }
+
+    .price-range label {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Basic Styling for Links */
+a {
+    color: #007bff; /* Default link color */
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s; /* Smooth color transition */
+}
+
+/* Add blue glow effect on click/focus */
+a:active, a:focus {
+    color: #0056b3; /* Dark blue color when clicked */
+    text-shadow: 0 0 8px rgba(0, 91, 255, 0.8), 0 0 16px rgba(0, 91, 255, 0.6); /* Blue glowing effect */
+}
+
+/* Optional: Hover effect for more interactivity */
+a:hover {
+    color: #0056b3; /* Dark blue color when hovered */
+    text-shadow: 0 0 8px rgba(0, 91, 255, 0.6), 0 0 16px rgba(0, 91, 255, 0.4); /* Mild blue glow on hover */
+}

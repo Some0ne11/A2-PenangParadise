@@ -1,0 +1,130 @@
+.footer {
+    background: linear-gradient(rgba(2, 9, 46, 0.9), rgba(2, 9, 46, 0.9));
+    color: white;
+    padding: 2rem 1rem; /* Reduced padding for smaller screens */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.left, .right {
+    flex: 1;
+    min-width: 250px; /* Ensure minimum width for smaller screens */
+}
+
+.left h1 {
+    color: #FFC0CB;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center; /* Center-align the title */
+}
+
+.icon {
+    display: flex;
+    justify-content: center; /* Center-align icons horizontally */
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+}
+
+.icon i {
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.icon i:hover {
+    color: #FFC0CB;
+    cursor: pointer;
+}
+
+.right h2 {
+    margin-bottom: 1.5rem;
+    color: #FFFAFA;
+    font-size: 1.8rem;
+    text-align: center; /* Center-align the title */
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap into multiple lines if necessary */
+    gap: 1rem; /* Reduced gap for smaller screens */
+    justify-content: center; /* Center-align team members */
+}
+
+.teammate {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Reduced gap for smaller screens */
+}
+
+.teammate img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover;
+}
+
+.teammate span {
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem; /* Reduced margin for smaller screens */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 992px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center; /* Center-align content */
+    }
+
+    .left, .right {
+        width: 100%;
+        text-align: center; /* Center-align text */
+    }
+
+    .icon {
+        justify-content: center; /* Center-align icons */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+        padding: 2rem 1rem; /* Further reduced padding for smaller screens */
+    }
+
+    .icon i {
+        margin-right: 0.5rem; /* Reduced margin for smaller screens */
+    }
+
+    .teammate {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+        text-align: center; /* Center-align text */
+    }
+
+    .teammate img {
+        width: 50px; /* Smaller image size for smaller screens */
+        height: 50px;
+    }
+
+    .teammate span {
+        font-size: 0.9rem; /* Smaller font size for smaller screens */
+    }
+}

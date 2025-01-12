@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* General App Styles */
+.app {
+  font-family: 'Fira Sans', Arial, sans-serif;
+  color: #333;
+  text-align: center;
+  background-color: #f4f4f9;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+.header {
+  background-color: transparent;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.header nav {
+  margin: 10px 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.header nav a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header nav a:hover {
+  color: #ff9800;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: #000000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  text-shadow:  0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+
+.hero-text p{
+  font-size: 1.3rem;
+  color: #000000;
+  padding: 0.5rem 0 2rem 0;
+}
+.hero-text .show{
+  text-decoration: none;
+  background: #fff;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #222;
+}
+
+/* Search Bar */
+.search-bar {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: block;
+  margin: 20px auto;
+}
+
+.search-bar:focus {
+  box-shadow: 0 0 8px rgba(23, 161, 254, 0.5);
+}
+
+/* Food List and Cards */
+.food-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.food-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  width: calc(50% - 10px);
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.food-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.food-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #00008B;
+  text-align: left;
+}
+
+.food-card p {
+  margin: 10px 0 5px;
+  color: #555;
+  text-align: left;
+}
+
+/* Reviews Section */
+.reviews {
+  text-align: left;
+}
+
+.reviews ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.review-input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.review-button {
+  background-color: #191970;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.review-button:hover,
+.review-button:focus {
+  background-color: #87CEFA;
+  transform: scale(1.05);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #444;
+  color: #fff;
+  padding: 20px 15px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #ffd54f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .food-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-bar {
+    width: 80%;
+  }
+  .hero-text .show{
+    text-decoration: none;
+    background: #fff;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #222;
+  }
+}
+
+@media (max-width: 480px) {
+  .food-card {
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+
+  .food-card {
+    padding: 15px;
+  }
+  .hero-text .show{
+    text-decoration: none;
+    background: #fff;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #222;
+  }
+}
+
