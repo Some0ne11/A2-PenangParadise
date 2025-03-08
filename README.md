@@ -1,6 +1,9 @@
 # Penang Paradise
 
-**Your Number 1 Website**
+**[CAT201 - ASSIGNMENT_2_REPORT.pdf](https://github.com/user-attachments/files/19143832/CAT201.-.ASSIGNMENT_2_REPORT.pdf)
+Your Number 1 Website**
+
+
 
 ## Table of Contents
 - [Team Members](#team-members)
