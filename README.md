@@ -78,7 +78,7 @@ npm run dev
 </td>
 
 <td align="center">
-<a href="https://github.com/#">
+<a href="https://github.com/ngxuanhern">
 <img src="#" width="100px;" alt="Profile Picture"/><br>
 <sub>
 <b>Ng Xuan Hern (22304061)</b>
@@ -87,7 +87,7 @@ npm run dev
 </td>
 
 <td align="center">
-<a href="https://github.com/#">
+<a href="https://github.com/L049XEZ">
 <img src="#" width="100px;" alt="Profile Picture"/><br>
 <sub>
 <b>Low Yvonne (22305530)</b>
